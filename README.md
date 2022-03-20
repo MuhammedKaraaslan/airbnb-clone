@@ -2,8 +2,6 @@
 
 AirBnb clone created with ReactJS and NextJS.
 
-## [Click Here](https://mhmmd-google-clone.herokuapp.com/) to view the site
-
 ## Topics
 - ReactJS
 - Next JS
