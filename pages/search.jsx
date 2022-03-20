@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import InfoCard from '../components/InfoCard'
 
 import { format } from 'date-fns';
+import LocationMap from '../components/LocationMap'
 
 function Search({ searchResults }) {
 
@@ -20,7 +21,7 @@ function Search({ searchResults }) {
 
     return (
         <div>
-            <Header placeholder={`${location} | ${range} |${numberOfGuests}`} />
+            <Header placeholder={`${location} | ${range} | ${numberOfGuests}`} />
 
             <main className='flex'>
                 <section className='flex-grow pt-14 px-6'>
@@ -53,6 +54,11 @@ function Search({ searchResults }) {
                         }
                     </div>
                 </section>
+
+                <section className='hidden xl:inline-flex xl:min-w-[600px]'>
+                    <LocationMap searchResults={searchResults} />
+                </section>
+
             </main>
 
             <Footer />

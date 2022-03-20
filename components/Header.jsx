@@ -9,7 +9,7 @@ import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UserIcon } from '@h
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
-import { DateRangePicker } from 'react-date-range';
+import { DateRangePicker } from 'react-date-range'; //Source: https://github.com/hypeserver/react-date-range
 
 function Header({ placeholder }) {
 
