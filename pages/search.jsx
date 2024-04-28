@@ -24,12 +24,12 @@ function Search({ searchResults }) {
             <Header placeholder={`${location} | ${range} | ${numberOfGuests}`} />
 
             <main className='flex'>
-                <section className='flex-grow pt-14 px-6'>
+                <section className='flex-grow px-6 pt-14'>
                     <p className='text-xs'>300+ Stays {range} for {numberOfGuests} guests</p>
 
-                    <h1 className='text-3xl font-semibold mt-2 mb-6'>Stays in {location}</h1>
+                    <h1 className='mt-2 mb-6 text-3xl font-semibold'>Stays in {location}</h1>
 
-                    <div className='hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap'>
+                    <div className='hidden mb-5 space-x-3 text-gray-800 lg:inline-flex whitespace-nowrap'>
                         <p className='button'>Cancellation Flexibility</p>
                         <p className='button'>Type of Place</p>
                         <p className='button'>Price</p>
@@ -70,7 +70,7 @@ export default Search
 
 
 export async function getServerSideProps(context) {
-    const searchResults = await fetch("https://links.papareact.com/isz").then(res => res.json());
+    const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").then(res => res.json());
     return {
         props: {
             searchResults: searchResults

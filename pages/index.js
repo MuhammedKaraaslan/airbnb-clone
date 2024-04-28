@@ -18,10 +18,10 @@ export default function Home({ exploreData, cardsData }) {
       <Header />
       <Banner />
 
-      <main className='max-w-7xl mx-auto px-8 sm:px-16' >
+      <main className='px-8 mx-auto max-w-7xl sm:px-16' >
         {/* Explore Nearby */}
         <section className='pt-6' >
-          <h2 className='text-4xl font-semibold pb-5'>Explore Nearby</h2>
+          <h2 className='pb-5 text-4xl font-semibold'>Explore Nearby</h2>
 
           <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
             {
@@ -34,8 +34,8 @@ export default function Home({ exploreData, cardsData }) {
 
         {/* Live Anywhere */}
         <section>
-          <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2>
-          <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
+          <h2 className='py-8 text-4xl font-semibold'>Live Anywhere</h2>
+          <div className='flex p-3 -ml-3 space-x-3 overflow-scroll scrollbar-hide'>
             {
               cardsData?.map(({ img, title }) => (
                 <MediumCard key={img} image={img} title={title} />
@@ -65,10 +65,10 @@ export default function Home({ exploreData, cardsData }) {
 
 
 export async function getStaticProps() {
-  const exploreData = await fetch('https://links.papareact.com/pyp')
+  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G")
     .then(res => res.json())
 
-  const cardsData = await fetch('https://links.papareact.com/zp1')
+  const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT')
     .then(res => res.json())
 
   return {
